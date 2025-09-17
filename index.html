@@ -2,36 +2,380 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Terms and Conditions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Terms and Conditions for [Your Project Name]. Read the rules, acceptable use, payments and refunds, disclaimers, and how disputes are handled.">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Terms and Conditions — [Your Project Name]">
+  <meta property="og:description" content="Contractual terms for using [Your Project Name].">
+  <meta property="og:url" content="https://your-domain.example.com/terms">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Terms and Conditions — [Your Project Name]">
+  <meta name="twitter:description" content="Contractual terms for using [Your Project Name].">
+  <link rel="canonical" href="https://your-domain.example.com/terms">
+
+  <title>Terms and Conditions — [Your Project Name]</title>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Terms and Conditions",
+    "url": "https://your-domain.example.com/terms",
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "[Your Project Name]"
+    },
+    "dateModified": "2025-09-01"
+  }
+  </script>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 50px auto;
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --text: #0f172a;  /* slate-900 */
+      --muted: #475569; /* slate-600 */
+      --border: #e2e8f0; /* slate-200 */
+      --link: #0ea5e9;  /* sky-500 */
+      --link-hover: #0284c7; /* sky-600 */
+      --accent-bg: #f8fafc; /* slate-50 */
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1220;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --border: #1f2937;
+        --link: #38bdf8;
+        --link-hover: #7dd3fc;
+        --accent-bg: #0f172a;
+      }
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
       line-height: 1.6;
     }
+
+    a { color: var(--link); }
+    a:hover { color: var(--link-hover); }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+      width: auto;
+      height: auto;
+      padding: .5rem .75rem;
+      background: var(--accent-bg);
+      border: 1px solid var(--border);
+      border-radius: .5rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: saturate(180%) blur(8px);
+    }
+    .wrap {
+      max-width: 72ch;
+      margin: 0 auto;
+      padding: 1rem;
+    }
     h1 {
-      text-align: center;
+      margin: 0;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      letter-spacing: .2px;
+    }
+    .meta {
+      margin-top: .25rem;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .toolbar {
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .actions {
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+    }
+    button.theme-toggle {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: .5rem;
+      padding: .4rem .65rem;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 1rem;
+    }
+    nav.toc {
+      background: var(--accent-bg);
+      border: 1px solid var(--border);
+      border-radius: .75rem;
+      padding: 1rem;
+      margin: 1rem 0 2rem;
+    }
+    nav.toc ol {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+    nav.toc a { text-decoration: none; }
+
+    section { margin: 2rem 0; }
+    h2 { margin: 0 0 .5rem; font-size: 1.25rem; }
+    p { margin: .5rem 0; }
+    ul { margin: .5rem 0 .5rem 1.25rem; }
+    li { margin: .25rem 0; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+      padding: 1rem;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: .95rem;
+    }
+
+    @media print {
+      header, .toc, .back-to-top, .actions { display: none !important; }
+      a { color: inherit; text-decoration: none; }
+      body { background: #fff; color: #000; }
     }
   </style>
 </head>
 <body>
-  <h1>Terms and Conditions</h1>
-  <p>Last updated: September 2025</p>
-  <p>Welcome to [Your Project Name]. By accessing or using this site/service, you agree to the following terms and conditions.</p>
+  <a class="skip-link" href="#content">Skip to content</a>
 
-  <h2>1. Usage</h2>
-  <p>You may use this service for lawful purposes only.</p>
+  <header role="banner">
+    <div class="wrap toolbar">
+      <div>
+        <h1>Terms and Conditions</h1>
+        <div class="meta" id="last-updated">Last updated: September 2025</div>
+      </div>
+      <div class="actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">Toggle theme</button>
+      </div>
+    </div>
+  </header>
 
-  <h2>2. Payments</h2>
-  <p>All payments are final unless otherwise stated in writing.</p>
+  <main id="content" role="main" class="wrap" aria-labelledby="page-title">
+    <p id="page-title" style="position:absolute; left:-9999px;">Terms and Conditions for [Your Project Name]</p>
+    <p>Welcome to <strong>[Your Project Name]</strong>. By accessing or using our website, software, or services (collectively, the "Service"), you agree to these Terms and Conditions (the "Terms"). If you do not agree, do not use the Service.</p>
 
-  <h2>3. Limitation of Liability</h2>
-  <p>We are not responsible for any losses or damages resulting from use of this service.</p>
+    <nav class="toc" aria-label="Table of contents">
+      <strong>On this page</strong>
+      <ol>
+        <li><a href="#acceptance">Acceptance of Terms</a></li>
+        <li><a href="#eligibility">Eligibility & Accounts</a></li>
+        <li><a href="#license">License & Intellectual Property</a></li>
+        <li><a href="#acceptable-use">Acceptable Use</a></li>
+        <li><a href="#payments">Payments, Billing & Refunds</a></li>
+        <li><a href="#third-party">Third‑Party Services</a></li>
+        <li><a href="#disclaimers">Disclaimers</a></li>
+        <li><a href="#liability">Limitation of Liability</a></li>
+        <li><a href="#indemnification">Indemnification</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#changes">Changes to the Service & Terms</a></li>
+        <li><a href="#governing-law">Governing Law</a></li>
+        <li><a href="#dispute">Dispute Resolution</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
 
-  <h2>4. Changes</h2>
-  <p>We may update these Terms at any time. Continued use means you accept the changes.</p>
+    <section id="acceptance" aria-labelledby="h-acceptance">
+      <h2 id="h-acceptance">1. Acceptance of Terms</h2>
+      <p>By creating an account, downloading, installing, or otherwise using the Service, you confirm that you have read, understand, and agree to be bound by these Terms and our <a href="#" rel="nofollow">Privacy Policy</a> (if applicable).</p>
+    </section>
 
-  <p style="margin-top:40px;">If you have questions, contact us at: youremail@example.com</p>
+    <section id="eligibility" aria-labelledby="h-eligibility">
+      <h2 id="h-eligibility">2. Eligibility & Accounts</h2>
+      <p>You must be legally capable of entering into a binding contract in your jurisdiction. If you create an account, you are responsible for safeguarding your credentials and for all activities under your account.</p>
+    </section>
+
+    <section id="license" aria-labelledby="h-license">
+      <h2 id="h-license">3. License & Intellectual Property</h2>
+      <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to access and use the Service for its intended purpose.</p>
+      <p>All rights, title, and interest in and to the Service, including content and software, are owned by <strong>[Your Company Name]</strong> or its licensors and are protected by intellectual property laws.</p>
+    </section>
+
+    <section id="acceptable-use" aria-labelledby="h-acceptable-use">
+      <h2 id="h-acceptable-use">4. Acceptable Use</h2>
+      <p>You agree not to, and will not permit others to:</p>
+      <ul>
+        <li>Use the Service for any unlawful purpose or in violation of any applicable law.</li>
+        <li>Reverse engineer, decompile, or disassemble the Service, except where permitted by law.</li>
+        <li>Interfere with or disrupt the integrity or performance of the Service.</li>
+        <li>Upload or transmit malicious code, or infringe third‑party rights.</li>
+      </ul>
+    </section>
+
+    <section id="payments" aria-labelledby="h-payments">
+      <h2 id="h-payments">5. Payments, Billing & Refunds</h2>
+      <p>Prices and fees are specified at the point of purchase and may change from time to time. Unless stated otherwise in writing, <strong>all sales are final</strong>. Where required by law, you may be entitled to a refund or specific remedies which will be honored.</p>
+      <p>If you are on a subscription, you authorize recurring charges until you cancel. You are responsible for any applicable taxes.</p>
+    </section>
+
+    <section id="third-party" aria-labelledby="h-third-party">
+      <h2 id="h-third-party">6. Third‑Party Services</h2>
+      <p>The Service may link to or interoperate with third‑party services. We do not control and are not responsible for third‑party content, policies, or practices. Use of third‑party services may be governed by their own terms and privacy policies.</p>
+    </section>
+
+    <section id="disclaimers" aria-labelledby="h-disclaimers">
+      <h2 id="h-disclaimers">7. Disclaimers</h2>
+      <p>To the maximum extent permitted by law, the Service is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind, whether express, implied, or statutory, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non‑infringement.</p>
+    </section>
+
+    <section id="liability" aria-labelledby="h-liability">
+      <h2 id="h-liability">8. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, in no event will we be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits, revenue, data, goodwill, or business opportunities, arising out of or related to your use of or inability to use the Service.</p>
+      <p>Our aggregate liability for all claims relating to the Service shall not exceed the amount you paid to us for the Service in the twelve (12) months preceding the event giving rise to the claim.</p>
+    </section>
+
+    <section id="indemnification" aria-labelledby="h-indemnification">
+      <h2 id="h-indemnification">9. Indemnification</h2>
+      <p>You will defend, indemnify, and hold harmless <strong>[Your Company Name]</strong> and its affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys’ fees) arising out of or related to your use of the Service or violation of these Terms.</p>
+    </section>
+
+    <section id="termination" aria-labelledby="h-termination">
+      <h2 id="h-termination">10. Termination</h2>
+      <p>We may suspend or terminate your access to the Service at any time, with or without notice, if we believe you have violated these Terms or if we discontinue the Service. Upon termination, your right to use the Service will immediately cease.</p>
+    </section>
+
+    <section id="changes" aria-labelledby="h-changes">
+      <h2 id="h-changes">11. Changes to the Service & Terms</h2>
+      <p>We may update the Service and these Terms from time to time. Material changes will be posted on this page with an updated "Last updated" date. Your continued use of the Service after changes become effective constitutes acceptance of the revised Terms.</p>
+    </section>
+
+    <section id="governing-law" aria-labelledby="h-governing-law">
+      <h2 id="h-governing-law">12. Governing Law</h2>
+      <p>These Terms are governed by the laws of <strong>[Your Jurisdiction]</strong>, without regard to its conflict of law principles. The United Nations Convention on Contracts for the International Sale of Goods does not apply.</p>
+    </section>
+
+    <section id="dispute" aria-labelledby="h-dispute">
+      <h2 id="h-dispute">13. Dispute Resolution</h2>
+      <p>Before filing a claim, you agree to try to resolve the dispute informally by contacting us at <a href="mailto:youremail@example.com">youremail@example.com</a>. If a dispute is not resolved within thirty (30) days, the parties agree to <strong>[binding arbitration / courts of {Your Venue}]</strong> as the exclusive forum, except that either party may seek injunctive relief for misuse of intellectual property.</p>
+      <p><em>Consumers in certain jurisdictions may have additional rights and choices; nothing in these Terms limits those rights where prohibited.</em></p>
+    </section>
+
+    <section id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact">14. Contact</h2>
+      <p>If you have questions about these Terms, contact us at: <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
+    </section>
+
+    <a class="back-to-top" href="#top" onclick="window.scrollTo({top:0, behavior: prefersReduced ? 'auto' : 'smooth'}); return false;">Back to top ↑</a>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrap">
+      © <span id="year"></span> <strong>[Your Company Name]</strong>. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Respect reduced motion
+    let prefersReduced = false;
+    try {
+      prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch (e) {}
+
+    // Dynamic year and last updated text
+    (function() {
+      var yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      var lastUpdatedEl = document.getElementById('last-updated');
+      // Update this date string when you materially change the terms
+      var lastUpdatedISO = '2025-09-01';
+      try {
+        var date = new Date(lastUpdatedISO);
+        var formatter = new Intl.DateTimeFormat(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+        lastUpdatedEl.textContent = 'Last updated: ' + formatter.format(date);
+      } catch (e) {}
+    })();
+
+    // Simple theme toggle (light/dark) overriding system preference
+    (function() {
+      var storageKey = 'terms-theme';
+      var root = document.documentElement;
+      var btn = document.getElementById('theme-toggle');
+
+      function apply(theme) {
+        if (!theme) return;
+        root.setAttribute('data-theme', theme);
+        if (theme === 'light') {
+          root.style.setProperty('--bg', '#ffffff');
+          root.style.setProperty('--text', '#0f172a');
+          root.style.setProperty('--muted', '#475569');
+          root.style.setProperty('--border', '#e2e8f0');
+          root.style.setProperty('--link', '#0ea5e9');
+          root.style.setProperty('--link-hover', '#0284c7');
+          root.style.setProperty('--accent-bg', '#f8fafc');
+        } else {
+          root.style.setProperty('--bg', '#0b1220');
+          root.style.setProperty('--text', '#e5e7eb');
+          root.style.setProperty('--muted', '#94a3b8');
+          root.style.setProperty('--border', '#1f2937');
+          root.style.setProperty('--link', '#38bdf8');
+          root.style.setProperty('--link-hover', '#7dd3fc');
+          root.style.setProperty('--accent-bg', '#0f172a');
+        }
+      }
+
+      try {
+        var initial = localStorage.getItem(storageKey);
+        if (initial) apply(initial);
+      } catch (e) {}
+
+      if (btn) {
+        btn.addEventListener('click', function() {
+          try {
+            var current = localStorage.getItem(storageKey) || 'system';
+            var next = current === 'dark' ? 'light' : 'dark';
+            localStorage.setItem(storageKey, next);
+            apply(next);
+          } catch (e) {
+            // If storage is blocked, still toggle visually
+            var fallback = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            apply(fallback);
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
+
+
