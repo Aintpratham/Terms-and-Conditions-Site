@@ -3,32 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Terms and Conditions for Phase 4 shift-picking service. Read the rules, data sharing, payments and refunds, disclaimers, and how disputes are handled.">
+  <meta name="description" content="Terms and Conditions of Use for the Phase 4.">
   <meta name="theme-color" content="#0f172a">
   <meta name="robots" content="index,follow">
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Terms and Conditions — Phase 4">
-  <meta property="og:description" content="Contractual terms for using Phase 4 shift-picking service.">
+  <meta property="og:title" content="Terms and Conditions of Use — Phase 4">
+  <meta property="og:description" content="Binding contractual terms for the Phase 4.">
   <meta property="og:url" content="https://your-domain.example.com/terms">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Terms and Conditions — Phase 4">
-  <meta name="twitter:description" content="Contractual terms for using Phase 4 shift-picking service.">
+  <meta name="twitter:title" content="Terms and Conditions of Use — Phase 4">
+  <meta name="twitter:description" content="Binding contractual terms for the Phase 4.">
   <link rel="canonical" href="https://your-domain.example.com/terms">
 
-  <title>Terms and Conditions — Phase 4</title>
+  <title>Terms and Conditions of Use — Amazon Phase 4</title>
 
   <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Terms and Conditions",
+    "name": "Terms and Conditions of Use",
     "url": "https://your-domain.example.com/terms",
     "about": {
       "@type": "SoftwareApplication",
-      "name": "Phase 4"
+      "name": "Amazon Phase 4"
     },
     "dateModified": "2025-09-01"
   }
@@ -38,14 +38,13 @@
     :root {
       color-scheme: light dark;
       --bg: #ffffff;
-      --text: #0f172a;  /* slate-900 */
-      --muted: #475569; /* slate-600 */
-      --border: #e2e8f0; /* slate-200 */
-      --link: #0ea5e9;  /* sky-500 */
-      --link-hover: #0284c7; /* sky-600 */
-      --accent-bg: #f8fafc; /* slate-50 */
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --link: #0ea5e9;
+      --link-hover: #0284c7;
+      --accent-bg: #f8fafc;
     }
-
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #0b1220;
@@ -57,104 +56,39 @@
         --accent-bg: #0f172a;
       }
     }
-
     html, body {
       margin: 0;
       padding: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
       line-height: 1.6;
     }
-
     a { color: var(--link); }
     a:hover { color: var(--link-hover); }
-
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-    .skip-link:focus {
-      left: 1rem;
-      top: 1rem;
-      width: auto;
-      height: auto;
-      padding: .5rem .75rem;
-      background: var(--accent-bg);
-      border: 1px solid var(--border);
-      border-radius: .5rem;
-    }
-
     header {
       position: sticky;
       top: 0;
-      z-index: 10;
       background: var(--bg);
       border-bottom: 1px solid var(--border);
-      backdrop-filter: saturate(180%) blur(8px);
+      z-index: 10;
     }
-    .wrap {
-      max-width: 72ch;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(1.5rem, 2.5vw, 2rem);
-      letter-spacing: .2px;
-    }
-    .meta {
-      margin-top: .25rem;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-    .toolbar {
-      display: flex;
-      gap: .5rem;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .actions {
-      display: flex;
-      gap: .5rem;
-      align-items: center;
-    }
+    .wrap { max-width: 72ch; margin: 0 auto; padding: 1rem; }
+    h1 { margin: 0; font-size: clamp(1.5rem, 2.5vw, 2rem); }
+    .meta { margin-top: .25rem; color: var(--muted); font-size: .95rem; }
     button.theme-toggle {
       background: transparent;
       color: var(--text);
       border: 1px solid var(--border);
       border-radius: .5rem;
       padding: .4rem .65rem;
-      font: inherit;
       cursor: pointer;
     }
-
-    main {
-      padding: 1rem;
-    }
-    nav.toc {
-      background: var(--accent-bg);
-      border: 1px solid var(--border);
-      border-radius: .75rem;
-      padding: 1rem;
-      margin: 1rem 0 2rem;
-    }
-    nav.toc ol {
-      margin: 0;
-      padding-left: 1.25rem;
-    }
-    nav.toc a { text-decoration: none; }
-
+    main { padding: 1rem; }
     section { margin: 2rem 0; }
     h2 { margin: 0 0 .5rem; font-size: 1.25rem; }
     p { margin: .5rem 0; }
     ul { margin: .5rem 0 .5rem 1.25rem; }
-    li { margin: .25rem 0; }
-
     footer {
       border-top: 1px solid var(--border);
       margin-top: 3rem;
@@ -162,229 +96,76 @@
       color: var(--muted);
       font-size: .95rem;
     }
-
-    .back-to-top {
-      display: inline-block;
-      margin-top: 1rem;
-      font-size: .95rem;
-    }
-
-    @media print {
-      header, .toc, .back-to-top, .actions { display: none !important; }
-      a { color: inherit; text-decoration: none; }
-      body { background: #fff; color: #000; }
-    }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#content">Skip to content</a>
-
   <header role="banner">
-    <div class="wrap toolbar">
+    <div class="wrap toolbar" style="display:flex;justify-content:space-between;align-items:center;">
       <div>
-        <h1>Terms and Conditions</h1>
+        <h1>Terms and Conditions of Use</h1>
         <div class="meta" id="last-updated">Last updated: September 2025</div>
       </div>
-      <div class="actions">
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">Toggle theme</button>
-      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">Toggle theme</button>
     </div>
   </header>
 
-  <main id="content" role="main" class="wrap" aria-labelledby="page-title">
-    <p id="page-title" style="position:absolute; left:-9999px;">Terms and Conditions for Phase 4</p>
-    <p>Welcome to <strong>Phase 4</strong>, a shift-picking service that helps you select and manage work shifts. By accessing or using our website, software, or services (collectively, the "Service"), you agree to these Terms and Conditions (the "Terms"). If you do not agree, do not use the Service.</p>
+  <main class="wrap" role="main">
+    <p>This document (“Agreement”) constitutes the full and binding Terms and Conditions of Use for the software extension hereinafter referred to as the <strong>Phase 4 Extension/Service</strong> (“Software”), developed, authored, and released by <strong>Pratham Shah</strong> (“Creator”). By installing, accessing, executing, distributing, or otherwise interacting with the Software in any manner whatsoever, the individual user (“User”) hereby acknowledges, accepts, and agrees to be bound, without limitation, qualification, or exception, to the following terms, conditions, disclaimers, obligations, and restrictions, irrespective of whether such User has read this Agreement in full, in part, or not at all.</p>
 
-    <nav class="toc" aria-label="Table of contents">
-      <strong>On this page</strong>
-      <ol>
-        <li><a href="#acceptance">Acceptance of Terms</a></li>
-        <li><a href="#data-sharing">Data Sharing & Privacy</a></li>
-        <li><a href="#service-description">Service Description</a></li>
-        <li><a href="#license">License & Intellectual Property</a></li>
-        <li><a href="#acceptable-use">Acceptable Use</a></li>
-        <li><a href="#payments">Payments, Billing & Refunds</a></li>
-        <li><a href="#disclaimers">Disclaimers</a></li>
-        <li><a href="#liability">Limitation of Liability</a></li>
-        <li><a href="#unauthorized-sharing">Unauthorized Sharing</a></li>
-        <li><a href="#termination">Termination</a></li>
-        <li><a href="#changes">Changes to the Service & Terms</a></li>
-        <li><a href="#governing-law">Governing Law</a></li>
-        <li><a href="#dispute">Dispute Resolution</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ol>
-    </nav>
-
-    <section id="acceptance" aria-labelledby="h-acceptance">
-      <h2 id="h-acceptance">1. Acceptance of Terms</h2>
-      <p>By accessing, downloading, installing, or otherwise using the Phase 4 shift-picking service, you acknowledge, accept, and agree to be bound by these Terms without limitation, qualification, or exception, irrespective of whether you have read this Agreement in full, in part, or not at all. If you do not agree in full, you must immediately cease all use of the Service.</p>
+    <section>
+      <h2>1. No Liability of Creator</h2>
+      <p>The Creator shall not, under any circumstances, be held responsible, liable, accountable, or otherwise answerable for any direct, indirect, incidental, consequential, exemplary, punitive, or special damages of any nature, whether arising in contract, tort, negligence, strict liability, statutory liability, or otherwise, including but not limited to losses, damages, interruptions, misuses, or harms caused by the User’s installation, configuration, execution, interpretation, modification, redistribution, or any conceivable use of the Software. The Creator expressly disclaims all responsibility for misuse, abuse, exploitation, or unintended operation.</p>
     </section>
 
-    <section id="data-sharing" aria-labelledby="h-data-sharing">
-      <h2 id="h-data-sharing">2. Data Sharing & Privacy</h2>
-      <p>By using our shift-picking service, you agree to share your personal details, work schedule information, availability, and other relevant data necessary for us to provide the service. This includes but is not limited to:</p>
-      <ul>
-        <li>Personal identification information (name, contact details)</li>
-        <li>Work schedule and availability preferences</li>
-        <li>Shift preferences and constraints</li>
-        <li>Employment-related information required for shift management</li>
-      </ul>
-      <p>We will use this information solely for the purpose of providing our shift-picking service and will handle it in accordance with applicable privacy laws.</p>
+    <section>
+      <h2>2. No Refunds, Credits, or Reimbursements</h2>
+      <p>All transactions, whether monetary or otherwise, pertaining to acquisition, licensing, or access to the Software are <strong>final, absolute, and irrevocable</strong>. Under no condition shall refunds, reversals, credits, chargebacks, or any form of reimbursement be issued or considered.</p>
     </section>
 
-    <section id="service-description" aria-labelledby="h-service-description">
-      <h2 id="h-service-description">3. Service Description</h2>
-      <p>Phase 4 is a shift-picking service that helps users select, manage, and optimize their work shifts. The service may include software extensions, web applications, and related tools designed to assist with shift scheduling and management.</p>
+    <section>
+      <h2>3. Unauthorized Sharing and Distribution Prohibited</h2>
+      <p>The User is strictly forbidden from duplicating, transmitting, reselling, sublicensing, redistributing, transferring, leasing, lending, or otherwise providing access to the Software, in part or in whole, to any other individual, entity, group, or organization without the Creator’s express prior written consent. Any unauthorized sharing constitutes a breach of this Agreement.</p>
     </section>
 
-    <section id="license" aria-labelledby="h-license">
-      <h2 id="h-license">4. License & Intellectual Property</h2>
-      <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to access and use the Service for its intended purpose.</p>
-      <p>All rights, title, and interest in and to the Service, including content and software, are owned by <strong>Pratham Shah</strong> or its licensors and are protected by intellectual property laws.</p>
+    <section>
+      <h2>4. No Guarantee of Functionality or Performance</h2>
+      <p>The Software is provided strictly on an <strong>“AS IS”</strong> and <strong>“AS AVAILABLE”</strong> basis. The Creator makes no warranties, representations, or guarantees of any kind, express or implied, including but not limited to merchantability, fitness for a particular purpose, non-infringement, uptime, accuracy, speed, compatibility, or future availability. The User assumes full and sole responsibility for all risks arising from use.</p>
     </section>
 
-    <section id="acceptable-use" aria-labelledby="h-acceptable-use">
-      <h2 id="h-acceptable-use">5. Acceptable Use</h2>
-      <p>You agree not to, and will not permit others to:</p>
-      <ul>
-        <li>Use the Service for any unlawful purpose or in violation of any applicable law.</li>
-        <li>Reverse engineer, decompile, or disassemble the Service, except where permitted by law.</li>
-        <li>Interfere with or disrupt the integrity or performance of the Service.</li>
-        <li>Upload or transmit malicious code, or infringe third‑party rights.</li>
-        <li>Use the Service in a manner that violates your employer's policies or terms of service.</li>
-      </ul>
+    <section>
+      <h2>5. User Responsibility and Assumption of Risk</h2>
+      <p>The User, and only the User, shall be solely responsible for ensuring compliance with all applicable laws, regulations, guidelines, and terms of service of third-party platforms or providers. By proceeding to use the Software, the User accepts all risks, acknowledges the absence of guarantees, and waives all claims against the Creator.</p>
     </section>
 
-    <section id="payments" aria-labelledby="h-payments">
-      <h2 id="h-payments">6. Payments, Billing & Refunds</h2>
-      <p>All transactions pertaining to acquisition, licensing, or access to the Service are <strong>final, absolute, and irrevocable</strong>. Under no condition shall refunds, reversals, credits, chargebacks, or any form of reimbursement be issued or considered, except where required by applicable law.</p>
-      <p>If you are on a subscription, you authorize recurring charges until you cancel. You are responsible for any applicable taxes.</p>
+    <section>
+      <h2>6. Termination of Use</h2>
+      <p>The Creator reserves the unrestricted right to revoke, terminate, suspend, or otherwise disable access to the Software at any time, without notice, justification, or compensation.</p>
     </section>
 
-    <section id="disclaimers" aria-labelledby="h-disclaimers">
-      <h2 id="h-disclaimers">7. Disclaimers</h2>
-      <p>The Service is provided strictly on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis. We make no warranties, representations, or guarantees of any kind, express or implied, including but not limited to merchantability, fitness for a particular purpose, non-infringement, uptime, accuracy, speed, compatibility, or future availability. You assume full and sole responsibility for all risks arising from use of the Service.</p>
+    <section>
+      <h2>7. Entire Agreement</h2>
+      <p>This Agreement constitutes the complete and exclusive understanding between the User and the Creator with respect to the Software and supersedes all prior or contemporaneous communications, understandings, agreements, representations, or proposals, whether oral or written.</p>
     </section>
 
-    <section id="liability" aria-labelledby="h-liability">
-      <h2 id="h-liability">8. Limitation of Liability</h2>
-      <p>We shall not, under any circumstances, be held responsible, liable, accountable, or otherwise answerable for any direct, indirect, incidental, consequential, exemplary, punitive, or special damages of any nature, whether arising in contract, tort, negligence, strict liability, statutory liability, or otherwise, including but not limited to losses, damages, interruptions, misuses, or harms caused by your installation, configuration, execution, interpretation, modification, redistribution, or any conceivable use of the Service.</p>
-      <p>We expressly disclaim all responsibility for misuse, abuse, exploitation, or unintended operation of the Service.</p>
-    </section>
-
-    <section id="unauthorized-sharing" aria-labelledby="h-unauthorized-sharing">
-      <h2 id="h-unauthorized-sharing">9. Unauthorized Sharing and Distribution Prohibited</h2>
-      <p>You are strictly forbidden from duplicating, transmitting, reselling, sublicensing, redistributing, transferring, leasing, lending, or otherwise providing access to the Service, in part or in whole, to any other individual, entity, group, or organization without our express prior written consent. Any unauthorized sharing constitutes a breach of this Agreement.</p>
-    </section>
-
-    <section id="termination" aria-labelledby="h-termination">
-      <h2 id="h-termination">10. Termination</h2>
-      <p>We reserve the unrestricted right to revoke, terminate, suspend, or otherwise disable access to the Service at any time, without notice, justification, or compensation. Upon termination, your right to use the Service will immediately cease.</p>
-    </section>
-
-    <section id="changes" aria-labelledby="h-changes">
-      <h2 id="h-changes">11. Changes to the Service & Terms</h2>
-      <p>We may update the Service and these Terms from time to time. Material changes will be posted on this page with an updated "Last updated" date. Your continued use of the Service after changes become effective constitutes acceptance of the revised Terms.</p>
-    </section>
-
-    <section id="governing-law" aria-labelledby="h-governing-law">
-      <h2 id="h-governing-law">12. Governing Law</h2>
-      <p>These Terms are governed by the laws of the jurisdiction where Pratham Shah operates, without regard to its conflict of law principles. The United Nations Convention on Contracts for the International Sale of Goods does not apply.</p>
-    </section>
-
-    <section id="dispute" aria-labelledby="h-dispute">
-      <h2 id="h-dispute">13. Dispute Resolution</h2>
-      <p>Before filing a claim, you agree to try to resolve the dispute informally by contacting us at <a href="mailto:youremail@example.com">youremail@example.com</a>. If a dispute is not resolved within thirty (30) days, the parties agree to binding arbitration as the exclusive forum, except that either party may seek injunctive relief for misuse of intellectual property.</p>
-      <p><em>Consumers in certain jurisdictions may have additional rights and choices; nothing in these Terms limits those rights where prohibited.</em></p>
-    </section>
-
-    <section id="contact" aria-labelledby="h-contact">
-      <h2 id="h-contact">14. Contact</h2>
-      <p>If you have questions about these Terms, contact us at: <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
-      <p><strong>By continuing to use, install, or execute the Service, you expressly affirm acceptance of every term contained herein. If you do not agree in full, the Service must be uninstalled and all usage ceased immediately.</strong></p>
-    </section>
-
-    <a class="back-to-top" href="#top" onclick="window.scrollTo({top:0, behavior: prefersReduced ? 'auto' : 'smooth'}); return false;">Back to top ↑</a>
+    <p><strong>By continuing to use, install, or execute the Software, the User expressly affirms acceptance of every term contained herein. If the User does not agree in full, the Software must be uninstalled and all usage ceased immediately.</strong></p>
   </main>
 
   <footer role="contentinfo">
-    <div class="wrap">
-      © <span id="year"></span> <strong>Pratham Shah</strong>. All rights reserved.
-    </div>
+    <div class="wrap">© <span id="year"></span> <strong>Pratham Shah</strong>. All rights reserved.</div>
   </footer>
 
   <script>
-    // Respect reduced motion
-    let prefersReduced = false;
-    try {
-      prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    } catch (e) {}
-
-    // Dynamic year and last updated text
-    (function() {
-      var yearEl = document.getElementById('year');
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-      var lastUpdatedEl = document.getElementById('last-updated');
-      // Update this date string when you materially change the terms
-      var lastUpdatedISO = '2025-09-01';
-      try {
-        var date = new Date(lastUpdatedISO);
-        var formatter = new Intl.DateTimeFormat(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
-        lastUpdatedEl.textContent = 'Last updated: ' + formatter.format(date);
-      } catch (e) {}
-    })();
-
-    // Simple theme toggle (light/dark) overriding system preference
-    (function() {
-      var storageKey = 'terms-theme';
-      var root = document.documentElement;
-      var btn = document.getElementById('theme-toggle');
-
-      function apply(theme) {
-        if (!theme) return;
-        root.setAttribute('data-theme', theme);
-        if (theme === 'light') {
-          root.style.setProperty('--bg', '#ffffff');
-          root.style.setProperty('--text', '#0f172a');
-          root.style.setProperty('--muted', '#475569');
-          root.style.setProperty('--border', '#e2e8f0');
-          root.style.setProperty('--link', '#0ea5e9');
-          root.style.setProperty('--link-hover', '#0284c7');
-          root.style.setProperty('--accent-bg', '#f8fafc');
-        } else {
-          root.style.setProperty('--bg', '#0b1220');
-          root.style.setProperty('--text', '#e5e7eb');
-          root.style.setProperty('--muted', '#94a3b8');
-          root.style.setProperty('--border', '#1f2937');
-          root.style.setProperty('--link', '#38bdf8');
-          root.style.setProperty('--link-hover', '#7dd3fc');
-          root.style.setProperty('--accent-bg', '#0f172a');
-        }
-      }
-
-      try {
-        var initial = localStorage.getItem(storageKey);
-        if (initial) apply(initial);
-      } catch (e) {}
-
-      if (btn) {
-        btn.addEventListener('click', function() {
-          try {
-            var current = localStorage.getItem(storageKey) || 'system';
-            var next = current === 'dark' ? 'light' : 'dark';
-            localStorage.setItem(storageKey, next);
-            apply(next);
-          } catch (e) {
-            // If storage is blocked, still toggle visually
-            var fallback = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            apply(fallback);
-          }
-        });
-      }
+    (function(){
+      var yearEl=document.getElementById('year');
+      if(yearEl) yearEl.textContent=new Date().getFullYear();
+      var btn=document.getElementById('theme-toggle');
+      var root=document.documentElement;
+      btn.addEventListener('click',function(){
+        var current=root.getAttribute('data-theme')||'light';
+        var next=current==='light'?'dark':'light';
+        root.setAttribute('data-theme',next);
+      });
     })();
   </script>
 </body>
 </html>
-
-
